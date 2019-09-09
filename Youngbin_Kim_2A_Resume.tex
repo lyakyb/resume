@@ -15,6 +15,11 @@
     %\renewcommand{\encodingdefault}{cg}
 %\renewcommand{\rmdefault}{lgrcmr}
 
+\usepackage{graphicx}
+\usepackage{tikzpagenodes}
+\graphicspath{{./}}
+
+
 \def\bull{\vrule height 0.95ex width .7ex depth 0ex }
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
@@ -76,7 +81,10 @@
 \raggedright
 \vspace{-12cm}
 
-    
+
+\begin{tikzpicture}[remember picture,overlay,shift={(current page.north east)}]
+\node[anchor=north east,xshift=0mm,yshift=0mm]{\includegraphics[width=3cm]{qrcode}};
+\end{tikzpicture}    
 
 %==== Profile ====%
 \begin{center}
