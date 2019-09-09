@@ -1,0 +1,180 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{xcolor}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{enumitem}
+    \usepackage[margin=1in, top=0.5in]{geometry}
+    \textheight=11in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\usepackage{graphicx}
+\usepackage{tikzpagenodes}
+\graphicspath{{./}}
+
+
+\def\bull{\vrule height 0.95ex width .7ex depth 0ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{jobGray}{RGB}{80,80,80}
+\definecolor{dateGray}{RGB}{130,130,130}
+\definecolor{headerGray}{RGB}{60,60,60}
+\definecolor{educationGray}{RGB}{70,70,70}
+
+\newcommand{\area} [2] {
+    \vspace{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace{-8pt} \\
+    \hspace{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace{-18pt}\vspace*{6pt} \textcolor{headerGray}{\textbf{\large{#1}}}}
+    \vspace{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace{-1-0.5in}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep -0.5in \itemsep -2pt}}{\vspace{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+	\begin{document}
+\raggedright
+\vspace{-12cm}
+
+
+
+%==== Profile ====%
+\begin{center}
+	{\Huge \scshape {Youngbin Kim}}\\
+	youngbin-kim.com $\cdot$ yb5kim@uwaterloo.ca $\cdot$ 226-978-1371 $\cdot$ github.com/lyakyb\\
+\end{center}
+
+\vspace{3mm}
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{\normalsize Software Engineer - Full Stack} \hfill Toronto, ON\\
+\textcolor{jobGray}{Universe} \hfill \textcolor{dateGray}{May 2019 | August 2019}\\
+\vspace{-2mm}
+\begin{itemize}[leftmargin=1cm ] \itemsep -0.5pt
+	\item Developed multiple business-critical core features including schedulable and filterable csv/xls export, refunding a process fee, automated email on disputes using Ruby/Rails, React/ReduxSaga, GraphQL, MongoDB and PostgreSQL.  
+	\item Automated syncing ledgers for 15 currencies and Zendesk ticket creation on the old support page using Ruby.
+	\item Resolved clients reported issues and bugs by fixing bad/orphaned data for the client and fixing bugs in the code.
+	\item Created a weekly reporting Slack bot and a GitHub repository finder during monthly hackathons	
+\end{itemize}
+
+\textbf{\normalsize Software Engineer} \hfill Toronto, ON\\ 
+\textcolor{jobGray}{Connected Lab Inc} \hfill \textcolor{dateGray}{September 2015 | April 2016}\\
+\vspace{-2mm}
+\begin{itemize}[leftmargin=1cm ] \itemsep -0.5pt
+	\item Built iOS/tvOS companion music streaming apps and a Bluetooth(BLE) HTTP-like server as the communication system between devices
+	\item Created an IoT device with a combination of Amazon Alexa, Amazon Web Service and Raspberry Pi
+	\item Wrote a WebSocket Objective-C library conforming to RFC6455 protocol
+	\item Audited client\textquotesingle{}s Objective-C libraries, identified bugs and fixed memory leaks 
+	\item Investigated React Native and Xamarin for cross-platform technologies
+\end{itemize}
+
+\textbf{\normalsize Software Developer} \hfill Calgary, AB\\
+\textcolor{jobGray}{Matrix Solutions Inc} \hfill \textcolor{dateGray}{January 2015 | April 2015}\\
+\vspace{-2mm}
+\begin{itemize}[leftmargin=1cm ]\itemsep -0.5pt
+	\item Built a RESTful service in Golang using the goji framework with MySQL as database and a .NET WPF application to minimize delivery time to clients
+	\item Developed in Test Driven Development (TDD) utilizing Moq and NCrunch
+	\item Familiarity with tools such as Teamcity, Fiddler, Postman, Resharper, Swagger
+\end{itemize}
+
+\header{Projects}
+{\textbf{\normalsize youngbin-kim.com}}\\
+\vspace{-1.5mm}
+\begin{itemize}[leftmargin= 1cm]\itemsep -0.5pt
+	\item Personal website built in React/Gatsby/Netlifyi. Can be accessed using QR Code above.
+\end{itemize}
+{\textbf{\normalsize FIRST Robotics - 1114 Simbotics}}\\
+\vspace{-1.5mm}
+\begin{itemize}[leftmargin=1cm ]\itemsep -0.5pt
+	\item Programmed manual and autonomous controls for fully functioning robots using vision tracking(OpenCV) and sensors
+\end{itemize}
+{\textbf{\normalsize Reminderer}}\hfill \textcolor{dateGray}{github.com/lyakyb/Reminderer}\\
+\vspace{-1.5mm}
+\begin{itemize}[leftmargin=1cm ]\itemsep -0.5pt
+	\item Developed a .NET WPF alarm, timer and schedule managing application with SQLite as database
+\end{itemize}
+{\textbf{\normalsize HelpYouDecide}}\hfill \textcolor{dateGray}{github.com/lyakyb/HelpYouDecide}\\
+\vspace{-1.5mm}
+\begin{itemize}[leftmargin=1cm ]\itemsep -0.5pt
+	\item Developed an iOS application designed to help overcome people with indecisiveness by randomly picking an input given a set of user inputs
+\end{itemize}
+{\textbf{\normalsize HMA 3D Printer}}\\
+\vspace{-1.5mm}
+\begin{itemize}[leftmargin=1cm ]\itemsep -0.5pt
+	\item Programmed Lego NXT to move a gantry for a 3D printer according to G-code commands
+	\item Designed and built a 3D printer using 3D printed, machined and Lego Mindstorms parts
+\end{itemize}
+\vspace{1mm}
+
+%==== Skills ====%
+\header{Skills}
+\vspace{-2.5mm}
+\begin{itemize}[leftmargin=*]\itemsep -0.5pt
+	\item \textbf{Software: } Ruby, Javascript(ES6), Objective C, C\#, C++, Java, Python, Go\\
+	\item \textbf{Tools/Frameworks: } Rails/Sidekiq, React/ReduxSaga, Ember, AWS, OpenCV, WPF, BLE\\
+	\item \textbf{Databases: } MongoDB, GraphQL, PostgreSQL, MySQL
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{\normalsize University of Waterloo}\hfill BASc, Mechatronics Engineering\\
+\textcolor{educationGray}{\small Waterloo, ON\hfill Expected May 2023}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=1cm]\itemsep -0.5pt
+	\item Engineering International Student Award
+\end{itemize}
+\vspace{1mm}
+
+%==== Interests ====%
+\header{Interests}
+\textbf{I enjoy: } Workingout, Cooking, Travelling, Robotics, eSports,  Pho Lover\\
+\vspace{1.5mm}
+\textbf{Video Games: } CSGO, League, COD4Promod, God of War is 2018 GOTY\\
+\end{document}
